@@ -1,0 +1,28 @@
+{
+    "name":"油品监测",
+    "value": true,
+    "children":[
+        {
+            "name": "油压颗粒度",
+            "value": true,
+            "itemStyle": {"color": "blue"}
+        },
+        {
+            "name": "液压油粘度",
+            "value": true,
+            "itemStyle": {"color": "red"}
+        },
+        {
+            "name": "液压油温度",
+            "value": true
+        },
+        {
+            "name": "液压油水分",
+            "value": true
+        },
+        {
+            "name": "油水混合",
+            "value": true
+        }
+    ]
+}

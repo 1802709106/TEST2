@@ -1,0 +1,30 @@
+{
+    "name":"润滑监测",
+    "value": true,
+    "children":[
+        {
+            "name": "主变速箱润滑流量监测 Q1",
+            "value": true
+        },
+        {
+            "name": "循环冷却套流量监测 Q2",
+            "value": true
+        },
+        {
+            "name": "循环冷却套流量监测 Q3",
+            "value": true
+        },
+        {
+            "name": "循环冷却套流量监测 Q4",
+            "value": true
+        },
+        {
+            "name": "X 轴传动箱润滑流量监测 Q5",
+            "value": true
+        },
+        {
+            "name": "Y 轴传动箱润滑流量监测 Q6",
+            "value": true
+        }
+    ]
+}

@@ -1,0 +1,66 @@
+{
+    "name":"油压监测",
+    "value": true,
+    "children":[
+        {
+            "name": "地坑油泵油压",
+            "value": true
+        },
+        {
+            "name": "L3 油泵油压",
+            "value": true
+        },
+        {
+            "name": "L3 油泵油压",
+            "value": true
+        },
+        {
+            "name": "多泵头入口油压",
+            "value": true,
+            "children":[
+                {
+                    "name": "1",
+                    "value": true
+                },
+                {
+                    "name": "2",
+                    "value": true
+                },
+                {
+                    "name": "3",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "name": "多泵头出口油压",
+            "value": true,
+            "children":[
+                {
+                    "name": "1",
+                    "value": true
+                },
+                {
+                    "name": "2",
+                    "value": true
+                },
+                {
+                    "name": "3",
+                    "value": true
+                },
+                {
+                    "name": "4",
+                    "value": true
+                },
+                {
+                    "name": "5",
+                    "value": true
+                },
+                {
+                    "name": "6",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}
