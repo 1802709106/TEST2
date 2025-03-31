@@ -419,55 +419,21 @@ export default {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1444px) {
     .life_predict {
-        flex-direction: column; /* 在手机上垂直排列 */
         font-size: 15px;
     }
-
-    .top_part {
-        width: 90%; /* 在手机上占据整行 */
+    .info_part span{
+        margin-right: -150px;
     }
-
-    .info_part,
-    .status_part {
-        margin-right: 0; /* 移除右边距 */
-        margin-bottom: 20px; /* 减少底部边距 */
-    }
-
     .info_part p,
-    .status_part p {
-        margin-left: 0; /* 移除左边距 */
-        margin-bottom: 20px;
-        margin-top: 20px;
-    }
-
-    .status_part ol {
-        font-size: 15px;
-    }
-    .class-chart {
-    width: 400px; height: 400px; display: none;
+.status_part p {
+    justify-content: flex-start;
+    /* 水平靠左对齐 */
+    margin-left: 50px;
 }
-
-    .show {
-        margin-right: 0; /* 移除右边距 */
-    }
-
-    .graph_part select {
-        width: 90%; /* 在手机上选择框占据整行 */
-    }
-    .parent-container{
-        margin-top: 30px; /* 增加顶部边距 */
-    }
-    .graph_part label {
-        margin-right: 10px; /* 减少标签与选择框之间的间距 */
-    }
-
-    .remaining_life_graph,
-    .modelimg {
-        margin-top: 20px; /* 减少顶部边距 */
-        margin-bottom: 20px;
-        margin-left: 30px;
-    }
+.status_part ol {
+    margin-left: 115px;
+}
 }
 </style>

@@ -4,23 +4,23 @@
     <div class="all_area">
         <div class="left_part">
             <div class="info">
-                <div class="title_1" style="font-size: larger; margin-top: 3%;">用户个人信息</div>
-                <div class="account" style="font-size: larger; margin-top: 3%;">用户编号：{{ this.$store.state.user_id }}
+                <div class="title_1" style="font-size: larger; margin-top: 2%;">用户个人信息</div>
+                <div class="account" style="font-size: larger; margin-top: 2%;">用户编号：{{ this.$store.state.user_id }}
                 </div>
-                <div class="account" style="font-size: larger; margin-top: 3%;">账号：{{ this.$store.state.username }}
+                <div class="account" style="font-size: larger; margin-top: 2%;">账号：{{ this.$store.state.username }}
                 </div>
-                <div class="tel" style="font-size: larger; margin-top: 3%;">电话：{{ this.$store.state.user_tel }}</div>
-                <div class="tel" style="font-size: larger; margin-top: 3%;">是否为管理员：
+                <div class="tel" style="font-size: larger; margin-top: 2%;">电话：{{ this.$store.state.user_tel }}</div>
+                <div class="tel" style="font-size: larger; margin-top: 2%;">是否为管理员：
                     <template>
                         {{ this.$store.state.manager ? "是" : "否" }}
                     </template>
                 </div>
-                <div class="state" style="font-size: larger; margin-top: 3%;">用户状态：
+                <div class="state" style="font-size: larger; margin-top: 2%;">用户状态：
                     <template>
                         {{ this.$store.state.state ? "正常" : "异常" }}
                     </template>
                 </div>
-                <el-button style="text-align: center; margin-top: 4%;" @click="show_changeInfo">修改个人信息</el-button>
+                <el-button style="text-align: center; margin-top: 2.5%;" @click="show_changeInfo">修改个人信息</el-button>
             </div>
 
 
@@ -201,7 +201,7 @@ export default {
 
         .info {
             margin-left: 5%;
-            margin-top: 5%;
+            margin-top: 2%;
             margin-bottom: 5%;
         }
     }
@@ -249,7 +249,7 @@ export default {
 }
 
 /* 媒体查询：当屏幕宽度小于或等于600px时 */
-@media (max-width: 600px) {
+@media (max-width: 1444px) {
     .all_area {
         width: 100%; /* 让容器宽度充满整个屏幕 */
         height: auto; /* 让容器高度自适应内容 */
@@ -272,6 +272,7 @@ export default {
     .all_area .right_part .el-table .cell-style,
     .all_area .right_part .el-table .header-cell-style {
         padding: 5px; /* 调整单元格内边距以适应小屏幕 */
+
     }
 
 }

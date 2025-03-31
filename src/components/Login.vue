@@ -121,7 +121,7 @@ body, html {
 }
 
 /* 为手机屏幕添加媒体查询 */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1444px) {
   .signin-form {
     width: 90%; /* 使用百分比宽度，使登录框宽度适应屏幕 */
     height: auto; /* 高度自动调整 */
@@ -131,9 +131,6 @@ body, html {
     padding: 20px; /* 添加内边距，使内容不紧贴边框 */
   }
 
-  .sign-title {
-    font-size: 10px; /* 减小字体大小，以适应手机屏幕 */
-  }
 }
 
 </style>

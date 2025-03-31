@@ -24,7 +24,7 @@
 
     <el-container style="height: 80%; border: 1px solid #eee">
 
-      <el-aside :class="{ collapsed: isAsideCollapsed }" :width="isAsideCollapsed ? '64px' : '250px'"
+      <el-aside 
         style="background-color: rgb(238, 241, 246)">
         <el-menu :default-openeds="['2', '3', '4', '5', '6']">
           <!-- <el-submenu index="1">
@@ -203,6 +203,7 @@ export default {
   text-align: center;
   line-height: 200px;
   height: calc(100vh - 70px);
+  max-width: 250px;
 }
 
 .el-main {
@@ -239,35 +240,8 @@ a {
 }
 
 /* 为手机屏幕添加媒体查询 */
-@media screen and (max-width: 768px) {
-  .header_1 {
-    font-size: 15px;
-    /* 减小字体大小 */
-    flex-direction: row;
-    /* 改为垂直布局 */
-    justify-content: center;
-    align-items: center;
-  }
+@media screen and (max-width: 1444px) {
 
-  .el-header {
-    line-height: 20px;
-    /* 减小行高 */
-    height: 150px;
-    /* 减小高度 */
-  }
-
-  .el-header .el-button {
-  font-size: 20px;
-  border: none;
-  background-color: transparent;
-  padding: 0; /* 移除内边距 */
-  margin-top: 20px; /* 移除外边距 */
-  margin-left: 10px;
-  display: flex; /* 使用 flex 布局 */
-  width: 40px; /* 设置按钮的宽度 */
-  height: 40px; /* 设置按钮的高度 */
-  cursor: pointer; /* 鼠标悬停时显示指针 */
-  }
 
   .el-footer {
     line-height: 20px;
@@ -277,8 +251,9 @@ a {
   .el-aside {
     line-height: 150px;
     /* 减小行高 */
-    height: calc(100vh - 50px);
+    height: calc(100vh - 5px);
     /* 根据新的el-header高度调整 */
+    max-width: 175px;
   }
 
   body>.el-container {

@@ -584,7 +584,7 @@ import { instance1, instance2 } from '../axiosInstances'
   }
 }
 /* 媒体查询：当屏幕宽度小于或等于600px时 */
-@media (max-width: 600px) {
+@media (max-width: 1444px) {
   .change_userInfo {
     width: 80%; /* 让容器宽度适应屏幕宽度 */
     height: auto; /* 让容器高度自适应内容 */

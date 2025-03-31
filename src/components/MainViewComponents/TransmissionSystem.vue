@@ -12,8 +12,8 @@
         <div v-show="change_method_flag==1" style="height: 100%;">
           <div class="left_setting border_class" style="float: left; width: 30%;">
               <div style="display: flex; margin: 10px 0 10px 0">
-                  <div style="line-height: 40px;width: 20%;">数据选择: </div>
-                  <template style="">
+                  <div style="line-height: 40px;width: 30%;">数据选择: </div>
+                  <template class="">
                     <el-select v-model="first_data.current_data_choose" placeholder="请选择数据" @change="change_data_choose">
                       <el-option
                         v-for="item in data_choose"
@@ -53,8 +53,8 @@
               </div>
               <!-- 这里把40改45 -->
               <div class="border_class" style="width: 99%;">
-                  <div style="display: flex;"><div style="width: 45%; text-align: right;">Ⅰ&Ⅱ轴齿轮啮合频率: </div><div style="width: 60%; ">{{ NumFilter(first_data.Eigenfrequency['engage_freq'].ax12) }} Hz</div></div>
-                  <div style="display: flex;"><div style="width: 45%; text-align: right;">Ⅱ&Ⅲ轴齿轮啮合频率: </div><div style="width: 60%; ">{{ NumFilter(first_data.Eigenfrequency['engage_freq'].ax23) }} Hz</div></div>
+                  <div style="display: flex;"><div style="width: 49%; text-align: right;">Ⅰ&Ⅱ轴齿轮啮合频率: </div><div style="width: 50%; ">{{ NumFilter(first_data.Eigenfrequency['engage_freq'].ax12) }} Hz</div></div>
+                  <div style="display: flex;"><div style="width: 49%; text-align: right;">Ⅱ&Ⅲ轴齿轮啮合频率: </div><div style="width: 50%; ">{{ NumFilter(first_data.Eigenfrequency['engage_freq'].ax23) }} Hz</div></div>
               </div>
               <div  class="border_class" style="width: 99%;">
                 <div style="display: flex;"><div style="width: 40%; text-align: right;">Ⅰ轴转速: </div><div style="width: 60%; ">{{ NumFilter(first_data.Eigenfrequency['ax_rates'][0]) }} rpm</div></div>
@@ -64,51 +64,51 @@
               <div>
                 <div class="border_class" style="margin-bottom: 5px; width: 99%;">轴承故障特征频率</div>
                 <div>
-                  <div class="border_class" style="width: 49%; float: left;">
+                  <div class="border_class" style="width: 45%; float: left;">
                     <div style="width: 100%;">
                       <!-- 下面六组的30改35 -->
                       <div class="little_title_ping">7212ACD/P4A轴承</div>
-                      <div style="display: flex;"><div style="width: 35%; text-align: right;">内环: </div><div style="width: 60%; text-align: right;">{{ NumFilter(first_data.Eigenfrequency['freq'][7212].in_freq) }} Hz</div></div>
-                      <div style="display: flex;"><div style="width: 35%; text-align: right;">外环: </div><div style="width: 60%; text-align: right;">{{ NumFilter(first_data.Eigenfrequency['freq'][7212].out_freq) }} Hz</div></div>
-                      <div style="display: flex;"><div style="width: 35%; text-align: right;">滚动体: </div><div style="width: 60%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][7212].rolling_freq) }} Hz</div></div>
-                      <div style="display: flex;"><div style="width: 35%; text-align: right;">保持架: </div><div style="width: 60%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][7212].cage_freq) }} Hz</div></div>
+                      <div style="display: flex;"><div style="width: 40%; text-align: right;">内环: </div><div style="width: 55%; text-align: right;">{{ NumFilter(first_data.Eigenfrequency['freq'][7212].in_freq) }} Hz</div></div>
+                      <div style="display: flex;"><div style="width: 40%; text-align: right;">外环: </div><div style="width: 55%; text-align: right;">{{ NumFilter(first_data.Eigenfrequency['freq'][7212].out_freq) }} Hz</div></div>
+                      <div style="display: flex;"><div style="width: 40%; text-align: right;">滚动体: </div><div style="width:55%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][7212].rolling_freq) }} Hz</div></div>
+                      <div style="display: flex;"><div style="width: 40%; text-align: right;">保持架: </div><div style="width: 55%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][7212].cage_freq) }} Hz</div></div>
                     </div>
                     <div style="width: 100%;">
                       <div class="little_title_ping">7214ACD/P4A轴承</div>
-                      <div style="display: flex;"><div style="width: 35%; text-align: right;">内环: </div><div style="width: 60%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][7214].in_freq) }} Hz</div></div>
-                      <div style="display: flex;"><div style="width: 35%; text-align: right;">外环: </div><div style="width: 60%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][7214].out_freq) }} Hz</div></div>
-                      <div style="display: flex;"><div style="width: 35%; text-align: right;">滚动体: </div><div style="width: 60%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][7214].rolling_freq) }} Hz</div></div>
-                      <div style="display: flex;"><div style="width: 35%; text-align: right;">保持架: </div><div style="width: 60%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][7214].cage_freq) }} Hz</div></div>
+                      <div style="display: flex;"><div style="width: 40%; text-align: right;">内环: </div><div style="width: 55%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][7214].in_freq) }} Hz</div></div>
+                      <div style="display: flex;"><div style="width: 40%; text-align: right;">外环: </div><div style="width: 55%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][7214].out_freq) }} Hz</div></div>
+                      <div style="display: flex;"><div style="width: 40%; text-align: right;">滚动体: </div><div style="width: 55%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][7214].rolling_freq) }} Hz</div></div>
+                      <div style="display: flex;"><div style="width: 40%; text-align: right;">保持架: </div><div style="width: 55%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][7214].cage_freq) }} Hz</div></div>
                     </div>
                     <div style="width: 100%;">
                       <div class="little_title_ping">7019ACD/P4A轴承</div>
-                      <div style="display: flex;"><div style="width: 35%; text-align: right;">内环: </div><div style="width: 60%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][7019].in_freq) }} Hz</div></div>
-                      <div style="display: flex;"><div style="width: 35%; text-align: right;">外环: </div><div style="width: 60%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][7019].out_freq) }} Hz</div></div>
-                      <div style="display: flex;"><div style="width: 35%; text-align: right;">滚动体: </div><div style="width: 60%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][7019].rolling_freq) }} Hz</div></div>
-                      <div style="display: flex;"><div style="width: 35%; text-align: right;">保持架: </div><div style="width: 60%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][7019].cage_freq) }} Hz</div></div>
+                      <div style="display: flex;"><div style="width: 40%; text-align: right;">内环: </div><div style="width: 55%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][7019].in_freq) }} Hz</div></div>
+                      <div style="display: flex;"><div style="width: 40%; text-align: right;">外环: </div><div style="width: 55%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][7019].out_freq) }} Hz</div></div>
+                      <div style="display: flex;"><div style="width: 40%; text-align: right;">滚动体: </div><div style="width: 55%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][7019].rolling_freq) }} Hz</div></div>
+                      <div style="display: flex;"><div style="width: 40%; text-align: right;">保持架: </div><div style="width: 55%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][7019].cage_freq) }} Hz</div></div>
                     </div>
                   </div>
-                  <div class="border_class" style="width: 49%; float: right;">
+                  <div class="border_class" style="width: 45%; float: right;">
                     <div style="width: 100%;">
                       <div class="little_title_ping">6216ACD/P4A轴承</div>
-                      <div style="display: flex;"><div style="width: 35%; text-align: right;">内环: </div><div style="width: 60%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][6216].in_freq) }} Hz</div></div>
-                      <div style="display: flex;"><div style="width: 35%; text-align: right;">外环: </div><div style="width: 60%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][6216].out_freq) }} Hz</div></div>
-                      <div style="display: flex;"><div style="width: 35%; text-align: right;">滚动体: </div><div style="width: 60%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][6216].rolling_freq) }} Hz</div></div>
-                      <div style="display: flex;"><div style="width: 35%; text-align: right;">保持架: </div><div style="width: 60%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][6216].cage_freq) }} Hz</div></div>
+                      <div style="display: flex;"><div style="width: 40%; text-align: right;">内环: </div><div style="width: 55%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][6216].in_freq) }} Hz</div></div>
+                      <div style="display: flex;"><div style="width: 40%; text-align: right;">外环: </div><div style="width: 55%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][6216].out_freq) }} Hz</div></div>
+                      <div style="display: flex;"><div style="width: 40%; text-align: right;">滚动体: </div><div style="width: 55%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][6216].rolling_freq) }} Hz</div></div>
+                      <div style="display: flex;"><div style="width: 40%; text-align: right;">保持架: </div><div style="width: 55%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][6216].cage_freq) }} Hz</div></div>
                     </div>
                     <div style="width: 100%;">
                       <div class="little_title_ping">NU1019-M1</div>
-                      <div style="display: flex;"><div style="width: 35%; text-align: right;">内环: </div><div style="width: 60%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][1019].in_freq) }} Hz</div></div>
-                      <div style="display: flex;"><div style="width: 35%; text-align: right;">外环: </div><div style="width: 60%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][1019].out_freq) }} Hz</div></div>
-                      <div style="display: flex;"><div style="width: 35%; text-align: right;">滚动体: </div><div style="width: 60%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][1019].rolling_freq) }} Hz</div></div>
-                      <div style="display: flex;"><div style="width: 35%; text-align: right;">保持架: </div><div style="width: 60%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][1019].cage_freq) }} Hz</div></div>
+                      <div style="display: flex;"><div style="width: 40%; text-align: right;">内环: </div><div style="width: 55%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][1019].in_freq) }} Hz</div></div>
+                      <div style="display: flex;"><div style="width: 40%; text-align: right;">外环: </div><div style="width: 55%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][1019].out_freq) }} Hz</div></div>
+                      <div style="display: flex;"><div style="width: 40%; text-align: right;">滚动体: </div><div style="width: 55%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][1019].rolling_freq) }} Hz</div></div>
+                      <div style="display: flex;"><div style="width: 40%; text-align: right;">保持架: </div><div style="width: 55%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][1019].cage_freq) }} Hz</div></div>
                     </div>
                     <div style="width: 100%;">
                       <div class="little_title_ping">7016ACD/P4A轴承</div>
-                      <div style="display: flex;"><div style="width: 35%; text-align: right;">内环: </div><div style="width: 60%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][7016].in_freq) }} Hz</div></div>
-                      <div style="display: flex;"><div style="width: 35%; text-align: right;">外环: </div><div style="width: 60%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][7016].out_freq) }} Hz</div></div>
-                      <div style="display: flex;"><div style="width: 35%; text-align: right;">滚动体: </div><div style="width: 60%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][7016].rolling_freq) }} Hz</div></div>
-                      <div style="display: flex;"><div style="width: 35%; text-align: right;">保持架: </div><div style="width: 60%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][7016].cage_freq) }} Hz</div></div>
+                      <div style="display: flex;"><div style="width: 40%; text-align: right;">内环: </div><div style="width: 55%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][7016].in_freq) }} Hz</div></div>
+                      <div style="display: flex;"><div style="width: 40%; text-align: right;">外环: </div><div style="width: 55%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][7016].out_freq) }} Hz</div></div>
+                      <div style="display: flex;"><div style="width: 40%; text-align: right;">滚动体: </div><div style="width: 55%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][7016].rolling_freq) }} Hz</div></div>
+                      <div style="display: flex;"><div style="width: 40%; text-align: right;">保持架: </div><div style="width: 55%; text-align: right; ">{{ NumFilter(first_data.Eigenfrequency['freq'][7016].cage_freq) }} Hz</div></div>
                     </div>
                   </div>
                 </div>
@@ -224,8 +224,7 @@
                           </option>
                         </select>               
                       </div>
-                      <!-- 加个 margin-right: -200px;-->
-                      <div style="float: right; width: 40%px; margin-right: -200px;">
+                      <div style="float: right; width: 40%px; margin-right: -320px;">
                         <div style="float: left; margin-left: 4px; margin-right: 20px;">窗口大小:</div>
                         <el-input v-model="window_size" placeholder="" style="width: 80px; float: left; margin-top: -5px;margin-right: 50px;"></el-input>
                         <div style="float: left; margin-left: -10px;margin-right: 20px;">步长:</div>
@@ -249,7 +248,7 @@
                           </div>
                           <div>
                             <div>
-                              <select v-model="current_left_chart" style="height: 30px; margin-right: 30px; position: absolute; left: 93%; z-index: 3;">
+                              <select v-model="current_left_chart" style="height: 30px; margin-right: 30px;margin-top: 5px; position: absolute; left: 91%; z-index: 3;">
                                 <option v-for="(chart_left, index) in chart_left_arr" :key="index" :value="chart_left">
                                   {{ chart_left }}
                                 </option>
@@ -263,14 +262,14 @@
                           </div>
                           <div>
                             <div>
-                              <select v-model="current_right_chart" style="height: 30px; position: absolute; left: 50%; z-index: 3;">
+                              <select v-model="current_right_chart" style="height: 30px; position: absolute; left: 49%; z-index: 3;">
                                 <option v-for="(chart_right, index) in chart_right_arr" :key="index" :value="chart_right">
                                   {{ chart_right }}
                                 </option>
                               </select>               
                             </div>
                             <div v-if="change_flag">
-                              <select v-model="current_channel" style="height: 30px; position: absolute; left: 93%; z-index: 3;">
+                              <select v-model="current_channel" style="height: 30px; position: absolute; left: 92%; z-index: 3;">
                                 <option v-for="(channel, index) in channel_arr" :key="index" :value="channel">
                                   {{ channel }}
                                 </option>
@@ -1176,7 +1175,8 @@ export default {
               },
               // 加个legend
               legend: {
-                right: 150,
+                right: 160,
+                top: 25,
               },
               series: [
                 {
@@ -1400,4 +1400,9 @@ export default {
     width: 300px;
 }
 
+@media screen and (max-width: 1444px) {
+  .el-select .el-input {
+    width: 200px;
+}
+}
 </style>
