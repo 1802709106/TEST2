@@ -22,11 +22,11 @@
 import axios from 'axios';
 
 const instance1 = axios.create({
-  baseURL: 'http://192.168.31.129:5000', // 根请求路径1（py后端）
+  baseURL: 'http://192.168.31.110:5000', // 根请求路径1（py后端）
 });
 
 const instance2 = axios.create({
-  baseURL: 'http://192.168.31.129:5000/front', // 根请求路径2（py后端）
+  baseURL: 'http://192.168.31.110:5000/front', // 根请求路径2（py后端）
 });
 
 const instance3 = axios.create({

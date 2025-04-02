@@ -11,7 +11,7 @@ module.exports = defineConfig({
 
       proxy: {
         '/calculate': {
-          target: 'http://192.168.31.120:5000',
+          target: 'http://192.168.31.110:5000',
           changeOrigin: true,
           pathRewrite: {
             '^/calculate': '/calculate'

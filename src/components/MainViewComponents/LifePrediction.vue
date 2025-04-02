@@ -77,7 +77,7 @@ export default {
             yData: null,
             chartvalue: 0,
             modelValue: '0',
-            
+
             deviceName: '重型机床',
             monitorPart: '滚动轴承',
             partModel: 'FFZD4010-3',
@@ -93,9 +93,9 @@ export default {
             console.log(this.modelValue);
         },
         selectData() {
-            if (this.modelValue=== '0') {
+            if (this.modelValue === '0') {
                 this.getData_1();
-            } else if (this.modelValue=== '1') {
+            } else if (this.modelValue === '1') {
                 this.getData_2();
             }
         },
@@ -105,15 +105,15 @@ export default {
             instance1.get('/front/state/life/life_predict_1').then(response => {
                 this.xData = response.data[0];
                 this.yData = response.data[1];
-                this.serviceLife=response.data[0][99]+1;
-                this.remainingLife=response.data[1][99];
-                this.remainingLife=this.remainingLife.toFixed(2);
-                this.degradationStatus='性能退化阶段';
-                this.maintenanceSuggestions=[
-                '请持续关注并做检修准备',
-                '请及时采购更换部件'
-            ],
-                this.initChart();
+                this.serviceLife = response.data[0][99] + 1;
+                this.remainingLife = response.data[1][99];
+                this.remainingLife = this.remainingLife.toFixed(2);
+                this.degradationStatus = '性能退化阶段';
+                this.maintenanceSuggestions = [
+                    '请持续关注并做检修准备',
+                    '请及时采购更换部件'
+                ],
+                    this.initChart();
             });
         },
         getData_2() {
@@ -122,15 +122,15 @@ export default {
             instance1.get('/front/state/life/life_predict_2').then(response => {
                 this.xData = response.data[0];
                 this.yData = response.data[1];
-                this.serviceLife=response.data[0][199]+1;
-                this.remainingLife=response.data[1][199];
-                this.remainingLife=this.remainingLife.toFixed(2);
-                this.degradationStatus='性能退化阶段';
-                this.maintenanceSuggestions=[
-                '请持续关注并做检修准备',
-                '请及时采购更换部件'
-            ],
-                this.initChart();
+                this.serviceLife = response.data[0][199] + 1;
+                this.remainingLife = response.data[1][199];
+                this.remainingLife = this.remainingLife.toFixed(2);
+                this.degradationStatus = '性能退化阶段';
+                this.maintenanceSuggestions = [
+                    '请持续关注并做检修准备',
+                    '请及时采购更换部件'
+                ],
+                    this.initChart();
             });
         },
         initChart() {
@@ -202,15 +202,20 @@ export default {
     /* 水平靠左对齐 */
     margin-left: 150px;
 }
+
 /* this */
 .status_part ol {
     list-style-type: none;
     padding-left: 0;
     margin: -62px 0 0 50px;
 }
+
 .class-chart {
-    width: 600px; height: 400px; display: none;
+    width: 600px;
+    height: 400px;
+    display: none;
 }
+
 .show {
     display: flex;
     /* 使用flex布局 */
@@ -300,7 +305,9 @@ export default {
     margin-left: -260px;
 }
 
-
+.info_part span {
+    margin-right: -100px;
+}
 
 
 #loading-screen {
@@ -423,17 +430,34 @@ export default {
     .life_predict {
         font-size: 15px;
     }
-    .info_part span{
-        margin-right: -150px;
+
+    .info_part span {
+        margin-right: -180px;
     }
+
     .info_part p,
-.status_part p {
-    justify-content: flex-start;
-    /* 水平靠左对齐 */
-    margin-left: 50px;
-}
-.status_part ol {
-    margin-left: 115px;
-}
+    .status_part p {
+        justify-content: flex-start;
+        /* 水平靠左对齐 */
+        margin-left: 50px;
+    }
+
+    .status_part ol {
+        margin-left: 150px;
+        width: 230px;
+    }
+
+    .parent-container {
+        width: 500px;
+
+    }
+
+    .divAlgorithm select {
+        width: 180px;
+    }
+
+    .divData select {
+        width: 180px;
+    }
 }
 </style>

@@ -87,7 +87,7 @@
           <el-table-column
             fixed="right"
             label="操作"
-            width="500">
+            width="200">
             <template slot-scope="scope">
               <el-button @click="handleClick(scope.row)" type="text" size="small">修改用户信息</el-button>
             </template>

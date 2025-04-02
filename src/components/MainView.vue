@@ -248,6 +248,10 @@ a {
     /* 减小行高 */
   }
 
+  .el-footer div{
+    margin-top: 20px;
+  }
+
   .el-aside {
     line-height: 150px;
     /* 减小行高 */

@@ -66,15 +66,15 @@
         <div class="border_class">
           <div style="padding-top: 10px;">液压系统监测</div>
           <div style="display: flex; text-align: center; padding-left: 10px; padding-top: 8px;">
-            <div style="width: 33%;">
+            <div style="width: 28%;">
               <div style="float: left;">油品</div>
               <normal :status=this.Hydraulic_system_status[0]></normal>
             </div>
-            <div style="width: 33%;">
+            <div style="width: 36%;">
               <div style="float: left;">油泵油压</div>
               <normal :status=this.Hydraulic_system_status[1]></normal>
             </div>
-            <div style="width: 33%;">
+            <div style="width: 36%;">
               <div style="float: left;">油路流量</div>
               <normal :status=this.Hydraulic_system_status[2]></normal>
             </div>
@@ -103,9 +103,9 @@
                   :cell-style="{ padding: '0px', background: '#e9eef3', color: '#606266', }"
                   :header-row-style="{ height: '30px' }" :header-cell-style="{ background: '#e9eef3', color: '#606266' }">
                   <!-- 200改125 -->
-                  <el-table-column prop="machine_name" label="电机名" width="125">
+                  <el-table-column prop="machine_name" label="电机名">
                   </el-table-column>
-                  <el-table-column prop="elc" label="电流" width="125">
+                  <el-table-column prop="elc" label="电流">
                     <template slot-scope="scope">
                       {{ NumFilter(scope.row.elc) }} A
                     </template>
@@ -850,19 +850,21 @@ div {
 
 @media screen and (max-width: 1444px) {
   .border_class div {
-    font-size: 15px;
+    font-size: 14px;
   }
   .div-style-1 {
     position: absolute;
-    margin-left: 500px;
+    margin-left: 400px;
+    margin-top: -5px;
   }
   .div-style-2 {
     position: absolute;
-    margin-left: 600px;
+    margin-left: 500px;
+    margin-top: -5px;
   }
   .div-style-3 {
     position: absolute;
-    margin-left: 250px; 
+    margin-left: 200px; 
     margin-top: 20px; 
   }
 }
